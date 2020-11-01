@@ -1,4 +1,3 @@
-
 def cal_iv(df, feature, target):
   lst = []
   cols = ['Variable', 'Interval', 'All', 'Bad']
@@ -17,3 +16,7 @@ def cal_iv(df, feature, target):
   data = data.sort_values(by=['Variable', 'Interval'], ascending=True)
   # print(data)
   return data['IV'].sum()
+
+# for col in bin_cols:
+#   print('The IV of ' + col + ':')
+#   print(cal_iv(df, col, 'SeriousDlqin2yrs'))
